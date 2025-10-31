@@ -139,23 +139,25 @@ http://localhost:8000/V5/index.html
 
 ## 🤝 Contributing
 
-This is a showcase project. Feel free to fork and customize for your own projects!
+Feel free to fork and customize for your own projects! Just give credit where it's due.
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+MIT License - Free to use with attribution.
+
+## 👨‍💻 Author
+
+**Hardik Dewra**
+- Email: thehardikdewra@gmail.com
+- Agency: [wedesignbrands.agency](https://wedesignbrands.agency)
+- Design: Neo-brutalism landing page for GreenPath AI
 
 ## 🎓 Credits
 
-- Design: Custom neo-brutalism design
 - Fonts: Google Fonts (Anton SC, Bebas Neue, Familjen Grotesk)
-- Icons: Custom SVG assets
-
-## 📞 Contact
-
-For questions or feedback, please open an issue in the repository.
+- Design System: Custom neo-brutalism style
 
 ---
 
-**Built with ❤️ using HTML, CSS, and vanilla JavaScript**
+**Built by Hardik Dewra** | Feel free to fork with attribution
 
