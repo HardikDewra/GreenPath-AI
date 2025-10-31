@@ -292,7 +292,7 @@
             line-height: 80px;
             color: #fff;
             text-shadow: 2px 4px 0px #000;
-            -webkit-text-stroke: 2px #000;
+            -webkit-text-stroke: 1px #000;
             margin-bottom: 120px;
             letter-spacing: 1.536px;
         }
@@ -551,7 +551,8 @@
             font-size: 48px;
             line-height: 64px;
             color: #fff;
-            text-shadow: 4px 4px 0px #000;
+            text-shadow: 2px 2px 0px #000;
+            -webkit-text-stroke: 1px #000;
             letter-spacing: -0.768px;
             margin-bottom: 12px;
         }
@@ -569,7 +570,8 @@
             background: #fff;
             border: 8px solid #000;
             height: 400px;
-            width: 524px;
+            width: 720px;
+            box-shadow: 8px 8px 0px #000;
         }
 
         .btn-lime {
@@ -730,6 +732,7 @@
         .ai-features-left {
             flex: 1;
             text-align: left;
+            max-width: 640px;
         }
 
         .ai-features-title {
@@ -738,6 +741,7 @@
             line-height: 76px;
             color: #fff;
             text-shadow: 2px 3px 0px #000;
+            -webkit-text-stroke: 1px #000;
             letter-spacing: -1.12px;
             margin-bottom: 8px;
         }
@@ -745,11 +749,11 @@
         .ai-features-subtitle {
             font-family: 'Familjen Grotesk', sans-serif;
             font-weight: 600;
-            font-size: 18px;
+            font-size: 20px;
             line-height: 24px;
             color: #000;
             margin-bottom: 20px;
-            letter-spacing: -0.18px;
+            letter-spacing: -0.6px;
         }
 
         .feature-list {
@@ -774,6 +778,7 @@
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            box-shadow: 2px 2px 0px #000;
         }
 
         .feature-icon img {
@@ -794,7 +799,8 @@
             background: #fff;
             border: 8px solid #000;
             height: 440px;
-            width: 540px;
+            width: 640px;
+            box-shadow: 8px 8px 0px #000;
         }
 
         /* Video Section */
@@ -819,7 +825,7 @@
 
         .video-container {
             background: #fff;
-            border: 20px solid #000;
+            border: 12px solid #000;
             border-radius: 8px;
             height: 760px;
             max-width: 1600px;
@@ -828,18 +834,20 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            box-shadow: 16px 16px 0px #000;
         }
 
         .play-button {
             width: 160px;
             height: 160px;
-            background: url('assets/play-button.svg') no-repeat center center;
+            background: url('assets/play-button.svg?v=2') no-repeat center center;
             background-size: contain;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: transform 0.3s;
+            filter: drop-shadow(4px 4px 0px #000);
         }
 
         .play-button:hover {
@@ -865,7 +873,7 @@
             letter-spacing: -1.152px;
             margin-bottom: 88px;
             text-shadow: 4px 4px 0px #000;
-            -webkit-text-stroke: 0px transparent;
+            -webkit-text-stroke: 1px #000;
         }
 
         .pricing-grid {
@@ -1117,7 +1125,8 @@
             flex: 1;
             background: #fff;
             border: 8px solid #000;
-            height: 324px;
+            height: 400px;
+            box-shadow: 10px 10px 0px #000;
         }
 
         /* Footer CTA */
@@ -1161,7 +1170,8 @@
             font-size: 80px;
             line-height: 80px;
             color: #f7f7f7;
-            text-shadow: 3px 3px 0px #000;
+            text-shadow: 2px 2px 0px #000;
+            -webkit-text-stroke: 1px #000;
             letter-spacing: -1.28px;
             margin-bottom: 24px;
         }
@@ -1196,52 +1206,71 @@
         footer {
             background: #000;
             width: 100%;
-            padding: 80px 0;
+            min-height: 640px;
+            padding: 80px 0 40px;
+            display: flex;
+            align-items: center;
         }
 
         .footer-container {
             max-width: 1600px;
             margin: 0 auto;
+            width: 100%;
+            min-height: 560px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .footer-content {
             display: flex;
             gap: 120px;
-            margin-bottom: 120px;
+            margin-bottom: 60px;
+            justify-content: space-between;
         }
 
         .footer-brand {
             display: flex;
             flex-direction: column;
-            gap: 48px;
+            gap: 32px;
+            max-width: 380px;
         }
 
         .footer-logo {
             font-family: 'Anton SC', sans-serif;
-            font-size: 40px;
+            font-size: 32px;
             color: #caff00;
-            text-shadow: 2px 2px 0px #5a5a5a;
             letter-spacing: -0.4px;
+            text-transform: uppercase;
         }
 
         .footer-tagline {
             font-size: 16px;
-            color: #e0e0e0;
+            line-height: 24px;
+            color: #c4c4c4;
             letter-spacing: -0.16px;
         }
 
         .social-icons {
             display: flex;
-            gap: 10px;
+            gap: 12px;
         }
 
         .social-icon {
-            width: 48px;
-            height: 48px;
-            background: #fff;
+            width: 56px;
+            height: 56px;
+            background: #caff00;
+            border: 2px solid #000;
             border-radius: 4px;
             cursor: pointer;
             transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Anton SC', sans-serif;
+            font-size: 16px;
+            color: #000;
+            font-weight: 700;
         }
 
         .social-icon:hover {
@@ -1250,32 +1279,51 @@
 
         .footer-links {
             display: flex;
-            flex: 1;
-            gap: 120px;
-            align-items: center;
+            gap: 100px;
         }
 
-        .footer-links span {
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-column-title {
             font-family: 'Familjen Grotesk', sans-serif;
-            font-weight: 500;
+            font-weight: 700;
             font-size: 24px;
-            color: #fff;
+            color: #caff00;
             text-transform: uppercase;
-            letter-spacing: -0.24px;
-            cursor: pointer;
-            transition: opacity 0.3s;
+            letter-spacing: 0.36px;
+            margin-bottom: 8px;
         }
 
-        .footer-links span:hover {
-            opacity: 0.7;
+        .footer-column a {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: #c4c4c4;
+            text-decoration: none;
+            letter-spacing: -0.16px;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
         }
 
         .footer-divider {
-            height: 4px;
-            background-image: url('assets/line.svg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin-bottom: 40px;
+            height: 1px;
+            background: #333;
+            margin-bottom: 24px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-size: 14px;
+            color: #666;
+            letter-spacing: -0.14px;
         }
 
         /* Responsive */
@@ -1373,6 +1421,11 @@
             .footer-content {
                 flex-direction: column;
                 gap: 40px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 32px;
             }
         }
     </style>
@@ -1610,31 +1663,31 @@
                     <div class="feature-list">
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <img src="assets/check-icon.svg" alt="Check">
+                                <img src="assets/check-icon.svg?v=3" alt="Check">
                             </div>
                             <span class="feature-text">Real-time carbon impact scores for every product</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <img src="assets/check-icon.svg" alt="Check">
+                                <img src="assets/check-icon.svg?v=3" alt="Check">
                             </div>
                             <span class="feature-text">Price filters so you can stay on budget</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <img src="assets/check-icon.svg" alt="Check">
+                                <img src="assets/check-icon.svg?v=3" alt="Check">
                             </div>
                             <span class="feature-text">Track your CO<sub>2</sub> savings over time</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <img src="assets/check-icon.svg" alt="Check">
+                                <img src="assets/check-icon.svg?v=3" alt="Check">
                             </div>
                             <span class="feature-text">Works on desktop and mobile browsers</span>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon">
-                                <img src="assets/check-icon.svg" alt="Check">
+                                <img src="assets/check-icon.svg?v=3" alt="Check">
                             </div>
                             <span class="feature-text">Scientifically backed suggestions (EPA, NOAA, MIT research)</span>
                         </div>
@@ -1805,22 +1858,62 @@
             <div class="footer-brand">
                 <div>
                     <div class="footer-logo">GreenPath AI</div>
-                    <p class="footer-tagline">Join 450,000+ people making better choices for the planet.</p>
+                    <p class="footer-tagline">Making sustainable shopping easy with AI-powered recommendations backed by real science.</p>
                 </div>
                 <div class="social-icons">
-                    <div class="social-icon"></div>
-                    <div class="social-icon"></div>
-                    <div class="social-icon"></div>
-                    <div class="social-icon"></div>
+                    <div class="social-icon">TW</div>
+                    <div class="social-icon">LI</div>
+                    <div class="social-icon">FB</div>
+                    <div class="social-icon">IG</div>
                 </div>
             </div>
             <div class="footer-links">
-                <span>Product</span>
-                <span>Product</span>
-                <span>Product</span>
+                <div class="footer-column">
+                    <div class="footer-column-title">Product</div>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#businesses">For Businesses</a>
+                    <a href="#extension">Chrome Extension</a>
+                    <a href="#mobile">Mobile App</a>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column-title">Platform</div>
+                    <a href="#api">API Docs</a>
+                    <a href="#integrations">Integrations</a>
+                    <a href="#security">Security</a>
+                    <a href="#enterprise">Enterprise</a>
+                    <a href="#developers">Developers</a>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column-title">Company</div>
+                    <a href="#about">About</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#careers">Careers</a>
+                    <a href="#press">Press</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column-title">Support</div>
+                    <a href="#help">Help Center</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#status">Status</a>
+                    <a href="#community">Community</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-column-title">Legal</div>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#terms">Terms</a>
+                    <a href="#cookies">Cookies</a>
+                    <a href="#licenses">Licenses</a>
+                    <a href="#compliance">Compliance</a>
+                </div>
             </div>
         </div>
         <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            © 2025 GreenPath AI. All rights reserved. Built with science, powered by AI.
+        </div>
         </div>
     </footer>
 
