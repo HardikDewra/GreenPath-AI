@@ -100,12 +100,12 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
         }
 
         .cta-btn:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
         }
 
         /* Hero Section */
@@ -207,12 +207,12 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 6px 6px 0px #000;
+            box-shadow: 9px 9px 0px #000;
         }
 
         .btn-primary:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 9px 9px 0px #000;
+            transform: translate(3px, 3px);
+            box-shadow: 6px 6px 0px #000;
         }
 
         .btn-secondary {
@@ -227,12 +227,12 @@
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
             min-width: 240px;
-            box-shadow: 6px 6px 0px #000;
+            box-shadow: 9px 9px 0px #000;
         }
 
         .btn-secondary:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 9px 9px 0px #000;
+            transform: translate(3px, 3px);
+            box-shadow: 6px 6px 0px #000;
         }
 
         /* Logos Strip */
@@ -390,6 +390,13 @@
             max-width: 880px;
             margin: 0 auto 72px;
             box-shadow: 8px 8px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .impact-image:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px #000;
         }
 
         /* Testimonials Section */
@@ -575,6 +582,13 @@
             height: 400px;
             width: 720px;
             box-shadow: 8px 8px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .track-impact-image:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px #000;
         }
 
         .btn-lime {
@@ -589,10 +603,11 @@
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
             width: fit-content;
+            box-shadow: 8px 8px 0px #000;
         }
 
         .btn-lime:hover {
-            transform: translate(-2px, -2px);
+            transform: translate(2px, 2px);
             box-shadow: 4px 4px 0px #000;
         }
 
@@ -725,6 +740,14 @@
             background: #47f4ff;
             border: 12px solid #000;
             padding: 70px 64px;
+            box-shadow: 8px 8px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ai-content:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px #000;
         }
 
         .ai-features-grid {
@@ -747,7 +770,7 @@
             text-shadow: 2px 3px 0px #000;
             -webkit-text-stroke: 1px #000;
             letter-spacing: -1.12px;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .ai-features-subtitle {
@@ -756,7 +779,7 @@
             font-size: 20px;
             line-height: 24px;
             color: #000000;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             letter-spacing: -0.6px;
         }
 
@@ -793,7 +816,7 @@
         .feature-text {
             font-family: 'Familjen Grotesk', sans-serif;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 21px;
             line-height: 24px;
             color: #000;
             letter-spacing: -0.18px;
@@ -805,6 +828,13 @@
             height: 440px;
             width: 640px;
             box-shadow: 8px 8px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ai-demo-image:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px #000;
         }
 
         /* Video Section */
@@ -839,23 +869,31 @@
             justify-content: center;
             position: relative;
             box-shadow: 16px 16px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .video-container:hover {
+            transform: translate(8px, 8px);
+            box-shadow: 8px 8px 0px #000;
         }
 
         .play-button {
             width: 160px;
             height: 160px;
-            background: url('assets/play-button.svg?v=2') no-repeat center center;
+            background: url('assets/play-button.svg?v=4') no-repeat center center;
             background-size: contain;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: transform 0.3s;
-            filter: drop-shadow(4px 4px 0px #000);
+            transition: transform 0.3s, filter 0.3s;
+            filter: drop-shadow(6px 6px 0px #000);
         }
 
         .play-button:hover {
-            transform: scale(1.1);
+            transform: translate(3px, 3px);
+            filter: drop-shadow(3px 3px 0px #000);
         }
 
         /* Pricing Section */
@@ -899,7 +937,6 @@
             background: #faff00;
             position: relative;
             align-items: center;
-            gap: 40px;
             padding-top: 56px;
             min-width: 480px;
             min-height: 720px;
@@ -975,11 +1012,13 @@
             -webkit-text-stroke: 0.8px #000;
             letter-spacing: 0.96px;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0px 6px 0px #000;
         }
 
         .pricing-cta:hover {
-            transform: translateY(-2px);
+            transform: translateY(2px);
+            box-shadow: 0px 4px 0px #000;
         }
 
         .pricing-cta.purple {
@@ -1024,6 +1063,12 @@
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s;
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        .faq-item:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #000;
         }
 
         .faq-header {
@@ -1033,10 +1078,6 @@
             padding: 20px 24px;
             cursor: pointer;
             min-height: 100px;
-        }
-
-        .faq-header:hover {
-            background: rgba(0, 0, 0, 0.02);
         }
 
         .faq-question {
@@ -1076,7 +1117,7 @@
         }
 
         .faq-item.active .faq-icon {
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
         }
 
         .faq-answer {
@@ -1138,6 +1179,13 @@
             border: 8px solid #000;
             height: 400px;
             box-shadow: 10px 10px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .platform-card:hover {
+            transform: translate(5px, 5px);
+            box-shadow: 5px 5px 0px #000;
         }
 
         /* Footer CTA */
@@ -1150,9 +1198,27 @@
             overflow: hidden;
         }
 
+        .footer-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/polka-green-dots-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat;
+            mix-blend-mode: luminosity;
+            opacity: 1;
+            z-index: 1;
+        }
+
         .footer-cta-container {
             max-width: 1600px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .footer-cta-bg {
@@ -1206,11 +1272,12 @@
             text-transform: uppercase;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 8px 7px 0px #000;
         }
 
         .footer-cta-button:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0px #000;
+            transform: translate(2px, 2px);
+            box-shadow: 6px 5px 0px #000;
         }
 
         /* Footer */
