@@ -288,7 +288,7 @@
         .steps-container {
             display: flex;
             gap: 36px;
-            align-items: flex-end;
+            align-items: stretch;
         }
 
         .step {
@@ -299,7 +299,15 @@
             padding: 48px 40px;
             position: relative;
             text-align: center;
-            box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+            min-height: 640px;
+            box-shadow: 8px 8px 0px #000;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .step:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px #000;
         }
 
         .step-icon {
@@ -315,6 +323,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 3px 3px 0px #000;
         }
 
         .step-icon span {
@@ -338,7 +347,7 @@
 
         .step-image {
             background: rgba(255, 0, 128, 0.08);
-            height: 200px;
+            height: 320px;
             border-radius: 8px;
             margin-bottom: 32px;
         }
@@ -1588,7 +1597,7 @@
                 <div class="step-icon"><span>2</span></div>
                 <h3>Shop Normally</h3>
                 <div class="step-image"></div>
-                <p>Browse products like you always do. Our AI scans every item and calculates its environmental impact in real-time.</p>
+                <p>Browse products like you always do. Our AI scans every item and easily calculates its environmental impact in real-time.</p>
             </div>
             <div class="step">
                 <div class="step-icon"><span>3</span></div>
