@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPath AI - Shop Smarter, Save the Planet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton+SC&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Familjen Grotesk', sans-serif;
+            background: #000;
+            color: #000;
+            overflow-x: hidden;
+        }
+
+        .main-wrapper {
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-wrapper > * {
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Typography */
+        .anton {
+            font-family: 'Anton SC', sans-serif;
+        }
+
+        /* Header */
+        header {
+            background: #000;
+            width: 100%;
+        }
+
+        .header-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 28px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            color: #caff00;
+            line-height: 32px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        nav a {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .cta-btn {
+            background: #caff00;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 2px;
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 19.2px;
+            color: #000;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: #caff00;
+            min-height: 1024px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .hero-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            position: relative;
+            height: 815px;
+            padding-top: 100px;
+        }
+
+        .phone-mockup {
+            position: absolute;
+            right: 0px;
+            top: -48px;
+            width: 1080px;
+            height: 1080px;
+            background-image: url('assets/hero-phone.png');
+            background-size: contain;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+
+        .hero-content {
+            max-width: 640px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 102px;
+            line-height: 124px;
+            color: #000;
+            margin-bottom: 24px;
+        }
+
+        .hero-subtitle-wrapper {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            background: #ff0080;
+            border: 8px solid #000;
+            border-radius: 4px;
+            padding: 0 16px ;
+            display: inline-block;
+            transform: skewX(-4deg);
+            margin-left: -14px;
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        .hero-subtitle-text {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 100px;
+            line-height: 120px;
+            color: #fff;
+            text-shadow: 2px 2px 0px #000;
+            -webkit-text-stroke: 3px #000;
+            transform: skewX(4deg);
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        .hero-description {
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 64px;
+            letter-spacing: -0.32px;
+        }
+
+        .hero-cta-block {
+            display: flex;
+            gap: 48px;
+        }
+
+        .btn-primary {
+            background: #fff;
+            border: 4px solid #000;
+            padding: 24px 40px;
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .btn-primary:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px #000;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            border: 4px solid #000;
+            padding: 24px 40px;
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-width: 240px;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .btn-secondary:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 9px 9px 0px #000;
+        }
+
+        /* Logos Strip */
+        .logos-section {
+            background: #000;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .logos-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .trusted-by {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .trusted-by h2 {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .logos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo-item {
+            padding: 10px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background: #fff502;
+            width: 100%;
+            padding: 80px 0 120px;
+            text-align: center;
+        }
+
+        .how-it-works-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 64px;
+            line-height: 80px;
+            color: #fff;
+            text-shadow: 2px 4px 0px #000;
+            -webkit-text-stroke: 2px #000;
+            margin-bottom: 120px;
+            letter-spacing: 1.536px;
+        }
+
+        .steps-container {
+            display: flex;
+            gap: 36px;
+            align-items: flex-end;
+        }
+
+        .step {
+            flex: 1;
+            background: #fff;
+            border: 8px solid #000;
+            border-radius: 2px;
+            padding: 48px 40px;
+            position: relative;
+            text-align: center;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+        }
+
+        .step-icon {
+            position: absolute;
+            top: -64px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff0080;
+            border: 4px solid #000;
+            border-radius: 8px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-icon span {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 64px;
+            line-height: 80px;
+            color: #fff;
+            text-shadow: 2px 4px 0px #000;
+            letter-spacing: 1.536px;
+        }
+
+        .step h3 {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 32px;
+            color: #000;
+            margin-bottom: 32px;
+            letter-spacing: 0.32px;
+        }
+
+        .step-image {
+            background: rgba(255, 0, 128, 0.08);
+            height: 200px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+        }
+
+        .step p {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        /* Impact Section */
+        .impact-section {
+            background: #00f0ff;
+            width: 100%;
+            padding: 64px 0 84px;
+            text-align: center;
+        }
+
+        .impact-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .impact-section .section-title {
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 72px;
+        }
+
+        .impact-image {
+            background: #fff;
+            border: 8px solid #000;
+            height: 400px;
+            max-width: 800px;
+            margin: 0 auto 72px;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background: #ff0080;
+            width: 100%;
+            padding: 100px 0;
+        }
+
+        .testimonials-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .testimonials-section .section-title {
+            font-size: 64px;
+            text-align: center;
+            margin-bottom: 80px;
+            letter-spacing: 1.2px;
+            -webkit-text-stroke: 1px #000
+        }
+
+        .stats-grid {
+            display: flex;
+            gap: 36px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background: #fff;
+            border: 8px solid #000;
+            border-radius: 2px;
+            padding: 48px 40px;
+            text-align: center;
+            box-shadow: 12px 12px 0px #000;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translate(9px, 9px);
+            box-shadow: 3px 3px 0px #000;
+        }
+
+        .stat-number {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 84px;
+            line-height: 80px;
+            color: #fff;
+            text-shadow: 2px 4px 0px #000;
+            -webkit-text-stroke: 3px #000;
+            letter-spacing: 4.2px;
+            margin-bottom: 32px;
+        }
+
+        .stat-label {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 32px;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .testimonials-grid {
+            display: flex;
+            gap: 36px;
+        }
+
+        .testimonial-card {
+            flex: 1;
+            background: #fff;
+            border: 8px solid #000;
+            border-radius: 2px;
+            padding: 48px 40px;
+            box-shadow: 12px 12px 0px #000;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .testimonial-card:hover {
+            transform: translate(9px, 9px);
+            box-shadow: 3px 3px 0px #000;
+        }
+
+        .testimonial-text {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #000;
+            margin-bottom: 40px;
+            letter-spacing: -0.24px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #000;
+            border-radius: 32px;
+        }
+
+        .author-avatar.green {
+            background: #cbff00;
+        }
+
+        .author-avatar.cyan {
+            background: #00f0ff;
+        }
+
+        .author-avatar.yellow {
+            background: #fff502;
+        }
+
+        .author-name {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 21.918px;
+            color: #000;
+            margin-bottom: 4px;
+        }
+
+        .author-role {
+            font-weight: 700;
+            font-size: 16.438px;
+            color: #666;
+            letter-spacing: -0.1644px;
+        }
+
+        /* Track Impact Section */
+        .track-impact-section {
+            background: #f2602c;
+            width: 100%;
+            padding: 100px 0;
+        }
+
+        .track-impact-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .track-impact-content {
+            flex: 1;
+            max-width: 640px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .track-impact-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 48px;
+            line-height: 64px;
+            color: #fff;
+            text-shadow: 4px 4px 0px #000;
+            letter-spacing: -0.768px;
+            margin-bottom: 12px;
+        }
+
+        .track-impact-description {
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 40px;
+            letter-spacing: 0.16px;
+        }
+
+        .track-impact-image {
+            background: #fff;
+            border: 8px solid #000;
+            height: 400px;
+            width: 524px;
+        }
+
+        .btn-lime {
+            background: #caff00;
+            border: 4px solid #000;
+            padding: 24px 40px;
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: fit-content;
+        }
+
+        .btn-lime:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: #fff8e7;
+            width: 100%;
+            padding: 80px 0 120px;
+        }
+
+        .problem-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .problem-section .section-title {
+            text-shadow: 4px 4px 0px #366600;
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 80px;
+            text-align: center;
+        }
+
+        .problems-grid {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .problem-card {
+            flex: 1;
+            background: #fff;
+            border: 8px solid #000;
+            border-radius: 2px;
+            padding: 48px 40px;
+            box-shadow: 16px 16px 0px #4D1A33;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .problem-card:hover {
+            transform: translate(12px, 12px);
+            box-shadow: 4px 4px 0px #4D1A33;
+        }
+
+        .problem-emoji {
+            font-size: 72px;
+            line-height: normal;
+            margin-bottom: 40px;
+        }
+
+        .problem-title {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 32px;
+            color: #000;
+            margin-bottom: 24px;
+            letter-spacing: 0.4px;
+        }
+
+        .problem-description {
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 500;
+            color: #000;
+            letter-spacing: -0.28px;
+        }
+
+        /* AI Agents Section */
+        .ai-agents-section {
+            background: #6b2fff;
+            width: 100%;
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+
+        .ai-agents-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .toggle-tabs {
+            background: #ff0080;
+            border: 4px solid #000;
+            border-radius: 6px;
+            height: 64px;
+            width: 556px;
+            margin: 0 auto 64px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-highlight {
+            position: absolute;
+            background: #fff;
+            border: 3px solid #000;
+            border-radius: 4px;
+            height: 46px;
+            width: 262px;
+            left: 9px;
+            transition: left 0.3s;
+        }
+
+        .toggle-tabs span {
+            flex: 1;
+            font-family: 'Anton SC', sans-serif;
+            font-size: 24px;
+            color: #000;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            letter-spacing: 0.48px;
+        }
+
+        .toggle-tabs span:last-child {
+            color: #fff;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .ai-agents-section .section-title {
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 64px;
+        }
+
+        .ai-content {
+            background: #47f4ff;
+            border: 12px solid #000;
+            padding: 70px 64px;
+        }
+
+        .ai-features-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 80px;
+        }
+
+        .ai-features-left {
+            flex: 1;
+            text-align: left;
+        }
+
+        .ai-features-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 56px;
+            line-height: 76px;
+            color: #fff;
+            text-shadow: 2px 3px 0px #000;
+            letter-spacing: -1.12px;
+            margin-bottom: 8px;
+        }
+
+        .ai-features-subtitle {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+            margin-bottom: 20px;
+            letter-spacing: -0.18px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: #cbff00;
+            border: 3px solid #000;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .feature-text {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+            letter-spacing: -0.18px;
+        }
+
+        .ai-demo-image {
+            background: #fff;
+            border: 8px solid #000;
+            height: 440px;
+            width: 540px;
+        }
+
+        /* Video Section */
+        .video-section {
+            background: #ff475f;
+            width: 100%;
+            padding: 80px 0 120px;
+            text-align: center;
+        }
+
+        .video-container-wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .video-section .section-title {
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 80px;
+            text-shadow: 4px 4px 0px #000;
+        }
+
+        .video-container {
+            background: #fff;
+            border: 20px solid #000;
+            border-radius: 8px;
+            height: 760px;
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .play-button {
+            width: 160px;
+            height: 160px;
+            background: url('assets/play-button.svg') no-repeat center center;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: #6b2fff;
+            width: 100%;
+            padding: 80px 0 100px;
+            text-align: center;
+        }
+
+        .pricing-container-wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .pricing-section .section-title {
+            color: #fff502;
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 88px;
+            text-shadow: 4px 4px 0px #000;
+            -webkit-text-stroke: 0px transparent;
+        }
+
+        .pricing-grid {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border: 8px solid #000;
+            padding: 48px 40px 56px;
+            width: 360px;
+        }
+
+        .pricing-card.featured {
+            background: #faff00;
+            position: relative;
+            padding-top: 56px;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -36px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff0080;
+            border: 4px solid #000;
+            border-radius: 1px;
+            padding: 16px 24px;
+        }
+
+        .featured-badge span {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 2px 2px 0px #000;
+            letter-spacing: 0.96px;
+            white-space: nowrap;
+        }
+
+        .pricing-plan {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 40px;
+            color: #000;
+            margin-bottom: 16px;
+            letter-spacing: -0.8px;
+        }
+
+        .pricing-amount {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 120px;
+            line-height: 128px;
+            color: #000;
+            text-shadow: 4px 4px 0px #000;
+            -webkit-text-stroke: 3px #fff;
+            letter-spacing: -2.4px;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+            margin-bottom: 12px;
+            letter-spacing: -0.18px;
+            list-style: none;
+        }
+
+        .pricing-cta {
+            background: #caff00;
+            border: 4px solid #000;
+            border-radius: 1px;
+            padding: 16px 53px;
+            width: 100%;
+            font-family: 'Anton SC', sans-serif;
+            font-size: 24px;
+            color: #fff;
+            text-shadow: 2px 2px 0px #000;
+            letter-spacing: 0.96px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+        }
+
+        .pricing-cta.purple {
+            background: #6b2fff;
+        }
+
+        .pricing-cta.white {
+            background: #fff;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #11f195;
+            width: 100%;
+            padding: 80px 0 120px;
+            text-align: center;
+        }
+
+        .faq-container-wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .faq-section .section-title {
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 60px;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .faq-container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border: 4px solid #000;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            cursor: pointer;
+            min-height: 100px;
+        }
+
+        .faq-header:hover {
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-question {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 40px;
+            line-height: 60px;
+            color: #000;
+            letter-spacing: -0.64px;
+        }
+
+        .faq-icon {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: '';
+            position: absolute;
+            background-color: #000;
+        }
+
+        .faq-icon::before {
+            width: 32px;
+            height: 4px;
+        }
+
+        .faq-icon::after {
+            width: 4px;
+            height: 32px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 24px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 24px 32px 24px;
+        }
+
+        .faq-answer p {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-size: 20px;
+            line-height: 32px;
+            color: #000;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* Platforms Section */
+        .platforms-section {
+            background: #9945ff;
+            width: 100%;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .platforms-container-wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .platforms-section .section-title {
+            color: #fff502;
+            font-size: 72px;
+            letter-spacing: -1.152px;
+            margin-bottom: 60px;
+            text-shadow: 4px 4px 0px #000;
+        }
+
+        .platforms-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .platforms-row {
+            display: flex;
+            gap: 32px;
+        }
+
+        .platform-card {
+            flex: 1;
+            background: #fff;
+            border: 8px solid #000;
+            height: 324px;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: #caff00;
+            width: 100%;
+            padding: 80px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-cta-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .footer-cta-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1536px;
+            height: 584px;
+            opacity: 0.1;
+            mix-blend-mode: luminosity;
+            background-image: url('assets/footer-bg.svg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .footer-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 786px;
+            margin: 0 auto 72px;
+        }
+
+        .footer-cta-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 80px;
+            line-height: 80px;
+            color: #f7f7f7;
+            text-shadow: 3px 3px 0px #000;
+            letter-spacing: -1.28px;
+            margin-bottom: 24px;
+        }
+
+        .footer-cta-subtitle {
+            font-size: 32px;
+            line-height: 40px;
+            font-weight: 500;
+            color: #000;
+            letter-spacing: -0.32px;
+        }
+
+        .footer-cta-button {
+            background: #fff;
+            border: 6px solid #000;
+            padding: 24px 40px;
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .footer-cta-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            width: 100%;
+            padding: 80px 0;
+        }
+
+        .footer-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: flex;
+            gap: 120px;
+            margin-bottom: 120px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .footer-logo {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 40px;
+            color: #caff00;
+            text-shadow: 2px 2px 0px #5a5a5a;
+            letter-spacing: -0.4px;
+        }
+
+        .footer-tagline {
+            font-size: 16px;
+            color: #e0e0e0;
+            letter-spacing: -0.16px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-2px);
+        }
+
+        .footer-links {
+            display: flex;
+            flex: 1;
+            gap: 120px;
+            align-items: center;
+        }
+
+        .footer-links span {
+            font-family: 'Familjen Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -0.24px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links span:hover {
+            opacity: 0.7;
+        }
+
+        .footer-divider {
+            height: 4px;
+            background-image: url('assets/line.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container,
+            header,
+            .hero-section,
+            .logos-section,
+            .how-it-works,
+            .impact-section,
+            .testimonials-section,
+            .track-impact-section,
+            .problem-section,
+            .ai-agents-section,
+            .video-section,
+            .pricing-section,
+            .faq-section,
+            .platforms-section,
+            .footer-cta,
+            footer {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+            .steps-container,
+            .stats-grid,
+            .testimonials-grid,
+            .problems-grid,
+            .pricing-grid,
+            .platforms-row {
+                flex-wrap: wrap;
+            }
+
+            .phone-mockup {
+                right: -400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container,
+            header,
+            .hero-section,
+            .logos-section,
+            .how-it-works,
+            .impact-section,
+            .testimonials-section,
+            .track-impact-section,
+            .problem-section,
+            .ai-agents-section,
+            .video-section,
+            .pricing-section,
+            .faq-section,
+            .platforms-section,
+            .footer-cta,
+            footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero-title {
+                font-size: 60px;
+                line-height: 70px;
+            }
+
+            .hero-subtitle-text {
+                font-size: 50px;
+                line-height: 60px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            .track-impact-section {
+                flex-direction: column;
+            }
+
+            .track-impact-image {
+                width: 100%;
+            }
+
+            .ai-features-grid {
+                flex-direction: column;
+            }
+
+            .ai-demo-image {
+                width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+        <div class="logo">GreenPath</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#demo">Demo</a>
+            <a href="#faqs">FAQs</a>
+        </nav>
+        <button class="cta-btn">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+        <div class="phone-mockup"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Shop Smarter</h1>
+            <div class="hero-subtitle-wrapper">
+                <div class="hero-subtitle">
+                    <span class="hero-subtitle-text">Save the Planet</span>
+                </div>
+            </div>
+            <p class="hero-description">AI-powered shopping assistant that shows you the carbon impact of every purchase and gives you better alternatives</p>
+            <div class="hero-cta-block">
+                <button class="btn-primary">Add to Chrome - Free</button>
+                <button class="btn-secondary">Watch Demo</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Logos Strip -->
+    <section class="logos-section">
+        <div class="logos-container">
+        <div class="trusted-by">
+            <h2>TRUSTED BY INDUSTRY LEADERS</h2>
+        </div>
+        <div class="logos-grid">
+            <div class="logo-item" style="display: flex; gap: 8px; align-items: center;">
+                <img src="assets/logo1-icon.svg" alt="Company Logo" width="44" height="48">
+                <img src="assets/logo1-text.svg" alt="Company Name" width="182" height="48">
+            </div>
+            <div class="logo-item" style="display: flex; gap: 10px; align-items: center;">
+                <img src="assets/logo2-icon.svg" alt="Company Logo" width="40" height="48">
+                <img src="assets/logo2-text.svg" alt="Company Name" width="102" height="48">
+            </div>
+            <div class="logo-item" style="display: flex; gap: 10px; align-items: center;">
+                <img src="assets/logo3-icon.svg" alt="Company Logo" width="24" height="48">
+                <img src="assets/logo3-text.svg" alt="Company Name" width="154" height="48">
+            </div>
+            <div class="logo-item" style="display: flex; gap: 10px; align-items: center;">
+                <img src="assets/logo4-icon.svg" alt="Company Logo" width="40" height="48">
+                <img src="assets/logo4-text.svg" alt="Company Name" width="163" height="48">
+            </div>
+            <div class="logo-item" style="display: flex; gap: 10px; align-items: center;">
+                <img src="assets/logo5-icon.svg" alt="Company Logo" width="40" height="48">
+                <img src="assets/logo5-text.svg" alt="Company Name" width="99" height="48">
+            </div>
+            <div class="logo-item" style="display: flex; gap: 10px; align-items: center;">
+                <img src="assets/logo6-icon.svg" alt="Company Logo" width="40" height="48">
+                <img src="assets/logo6-text.svg" alt="Company Name" width="158" height="48">
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="features">
+        <div class="how-it-works-container">
+        <h2 class="section-title">How it Works?</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon"><span>1</span></div>
+                <h3>Install Extension</h3>
+                <div class="step-image"></div>
+                <p>Add GreenPath to Chrome, Firefox, or Safari in one click. Works on 50,000+ stores including Amazon, Walmart, and Target.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"><span>2</span></div>
+                <h3>Shop Normally</h3>
+                <div class="step-image"></div>
+                <p>Browse products like you always do. Our AI scans every item and calculates its environmental impact in real-time.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"><span>3</span></div>
+                <h3>Make Better Choices</h3>
+                <div class="step-image"></div>
+                <p>See carbon scores and get instant alternatives. Track your savings and watch your environmental impact shrink over time.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="impact-container">
+        <h2 class="section-title">See Your Impact In Real-Time</h2>
+        <div class="impact-image"></div>
+        <button class="btn-primary">Add to Chrome - Free</button>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+        <h2 class="section-title">450K+ PEOPLE ARE ALREADY SHOPPING SMARTER</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">45K+</div>
+                <div class="stat-label">Daily ACTIVE USERS</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4.2K+</div>
+                <div class="stat-label">CERTIFIED BUSINESES</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2.3T+</div>
+                <div class="stat-label">avg co2<br>saved/year</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">34%</div>
+                <div class="stat-label">Coversion Increase</div>
+            </div>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I had no idea my shopping habits were so bad for the environment. Greenpath makes it super easy to find better options without spending more."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar green"></div>
+                    <div>
+                        <div class="author-name">Sarah Mitchell</div>
+                        <div class="author-role">Consumer, San Francisco</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I had no idea my shopping habits were so bad for the environment. Greenpath makes it super easy to find better options without spending more."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar cyan"></div>
+                    <div>
+                        <div class="author-name">Marcus Chen</div>
+                        <div class="author-role">CEO, EcoHome Brands</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I had no idea my shopping habits were so bad for the environment. Greenpath makes it super easy to find better options without spending more."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar yellow"></div>
+                    <div>
+                        <div class="author-name">Dr. Lisa Wang</div>
+                        <div class="author-role">Environmental Scientist</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Track Impact Section -->
+    <section class="track-impact-section">
+        <div class="track-impact-container">
+        <div class="track-impact-content">
+            <div>
+                <h2 class="track-impact-title">Track Your Environmental Impact</h2>
+                <p class="track-impact-description">Watch your carbon footprint shrink in real-time. Get monthly reports showing exactly how much CO2 you've saved and how you compare to others.</p>
+            </div>
+            <button class="btn-lime">Add to Chrome - Free</button>
+        </div>
+        <div class="track-impact-image"></div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="problem-container">
+        <h2 class="section-title">The problem with eco-friendly shopping. </h2>
+        
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-emoji">🤔</div>
+                <h3 class="problem-title">You're Flying Blind</h3>
+                <p class="problem-description">Zero way to know if a product is actually sustainable or just greenwashing. Businesses can claim whatever they want.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-emoji">⏰</div>
+                <h3 class="problem-title">Research Takes Forever</h3>
+                <p class="problem-description">Spending hours trying to find better alternatives for every purchase is exhausting. Nobody has time for that.</p>
+            </div>
+        </div>
+
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-emoji">💸</div>
+                <h3 class="problem-title">Sustainable = Expensive</h3>
+                <p class="problem-description">People assume eco-friendly products cost way more. Often that's not true, but finding affordable options is hard.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-emoji">🎭</div>
+                <h3 class="problem-title">Research Takes Forever</h3>
+                <p class="problem-description">Companies can easily slap "eco"labels on products that aren't actually better. You can't trust packaging anymore.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- AI Agents Section -->
+    <section class="ai-agents-section">
+        <div class="ai-agents-container">
+        <div class="toggle-tabs">
+            <div class="toggle-highlight"></div>
+            <span>For Shoppers</span>
+            <span>For Businesses</span>
+        </div>
+
+        <h2 class="section-title">HOW GREENPATH AI AGENTS WORKS?</h2>
+
+        <div class="ai-content">
+            <div class="ai-features-grid">
+                <div class="ai-features-left">
+                    <h3 class="ai-features-title">SHOP WITH CONFIDENCE</h3>
+                    <p class="ai-features-subtitle">Our browser extension works on 50,000+ stores including Amazon, Walmart, and Target. See carbon scores and better alternatives while you browse.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="assets/check-icon.svg" alt="Check">
+                            </div>
+                            <span class="feature-text">Real-time carbon impact scores for every product</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="assets/check-icon.svg" alt="Check">
+                            </div>
+                            <span class="feature-text">Price filters so you can stay on budget</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="assets/check-icon.svg" alt="Check">
+                            </div>
+                            <span class="feature-text">Track your CO<sub>2</sub> savings over time</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="assets/check-icon.svg" alt="Check">
+                            </div>
+                            <span class="feature-text">Works on desktop and mobile browsers</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <img src="assets/check-icon.svg" alt="Check">
+                            </div>
+                            <span class="feature-text">Scientifically backed suggestions (EPA, NOAA, MIT research)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-demo-image"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="demo">
+        <div class="video-container-wrapper">
+        <h2 class="section-title">See GreenPath in Action</h2>
+        <div class="video-container">
+            <div class="play-button"></div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="pricing-container-wrapper">
+        <h2 class="section-title">Simple Pricing. Start Free.</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-plan">Free</div>
+                <div class="pricing-amount">$0</div>
+                <ul class="pricing-features">
+                    <li>→ Impact Tracking</li>
+                    <li>→ News feed access</li>
+                    <li>→ Browser Extension</li>
+                    <li>→ Free guidance videos</li>
+                    <li>→ Carbon impact scores</li>
+                    <li>→ Product recommendations</li>
+                </ul>
+                <button class="pricing-cta">Get Started for Free</button>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="featured-badge">
+                    <span>Most Popular</span>
+                </div>
+                <div class="pricing-plan">Premium</div>
+                <div class="pricing-amount">$4.99</div>
+                <ul class="pricing-features">
+                    <li>→ Priority Support</li>
+                    <li>→ Advanced Filtering</li>
+                    <li>→ Price tracking & alerts</li>
+                    <li>→ Early access to features</li>
+                    <li>→ Carbon offset integration</li>
+                    <li>→ Everything from Free Tier</li>
+                </ul>
+                <button class="pricing-cta purple">Get Premium</button>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-plan">Enterprise</div>
+                <div class="pricing-amount">$199</div>
+                <ul class="pricing-features">
+                    <li>→ Email Support</li>
+                    <li>→ Verified badge</li>
+                    <li>→ Supplier network</li>
+                    <li>→ 50K API calls/month</li>
+                    <li>→ Analytics dashboard</li>
+                    <li>→ GreenPath certification</li>
+                </ul>
+                <button class="pricing-cta white">Contact Sales</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faqs">
+        <div class="faq-container-wrapper">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-header">
+                    <div class="faq-question">How Accurate are you Carbon Scores?</div>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Our carbon scores are calculated using data from EPA, NOAA, and MIT research. We analyze the full product lifecycle including manufacturing, shipping, and disposal. Our algorithm is regularly audited by third-party environmental scientists and maintains 92% accuracy compared to detailed LCA studies. We update our database monthly with the latest environmental impact research.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header">
+                    <div class="faq-question">Does this Work on Mobile?</div>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! GreenPath works perfectly on mobile browsers including Chrome, Safari, and Firefox on both iOS and Android. The mobile experience is optimized for on-the-go shopping with quick carbon score displays and easy product comparisons. Simply install our browser extension on your mobile device and shop sustainably anywhere.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header">
+                    <div class="faq-question">How do you make money if it's FREE?</div>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>GreenPath is free for consumers forever. We earn revenue through our Premium subscription ($4.99/month) offering advanced features, and our Enterprise plan for businesses seeking certification. We also receive small affiliate commissions when you purchase through our sustainable product recommendations. We never sell your data or show ads - our mission is to make sustainable shopping accessible to everyone.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header">
+                    <div class="faq-question">How Do I get my Business Certified?</div>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>Business certification starts with submitting your sustainability documentation through our Enterprise portal. Our team reviews your supply chain, manufacturing processes, and carbon footprint data. The certification process takes 2-4 weeks and includes on-site verification for larger operations. Certified businesses receive a GreenPath badge, priority listing in our recommendations, and access to our B2B sustainability network. Contact our sales team to start the certification process.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-header">
+                    <div class="faq-question">What Stores do you support?</div>
+                    <div class="faq-icon"></div>
+                </div>
+                <div class="faq-answer">
+                    <p>GreenPath works on 50,000+ online stores including Amazon, Walmart, Target, eBay, Etsy, AliExpress, and thousands of independent retailers. We support all major e-commerce platforms including Shopify, WooCommerce, and Magento stores. If a store isn't supported yet, you can request it through the extension and we typically add new stores within 48 hours based on user demand.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms-section">
+        <div class="platforms-container-wrapper">
+        <h2 class="section-title">Works with Your Favourite Platforms</h2>
+        
+        <div class="platforms-grid">
+            <div class="platforms-row">
+                <div class="platform-card"></div>
+                <div class="platform-card"></div>
+                <div class="platform-card"></div>
+                <div class="platform-card"></div>
+            </div>
+            <div class="platforms-row">
+                <div class="platform-card"></div>
+                <div class="platform-card"></div>
+                <div class="platform-card"></div>
+                <div class="platform-card"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="footer-cta-container">
+        <div class="footer-cta-content">
+            <h2 class="footer-cta-title">Ready to Shop Smarter?</h2>
+            <p class="footer-cta-subtitle">Join 450,000+ people making better choices for the planet.</p>
+        </div>
+        <button class="footer-cta-button">Add to Chrome - Free</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div>
+                    <div class="footer-logo">GreenPath AI</div>
+                    <p class="footer-tagline">Join 450,000+ people making better choices for the planet.</p>
+                </div>
+                <div class="social-icons">
+                    <div class="social-icon"></div>
+                    <div class="social-icon"></div>
+                    <div class="social-icon"></div>
+                    <div class="social-icon"></div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <span>Product</span>
+                <span>Product</span>
+                <span>Product</span>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const header = item.querySelector('.faq-header');
+            header.addEventListener('click', function() {
+                // Close other FAQs (optional - remove if you want multiple open)
+                // document.querySelectorAll('.faq-item').forEach(otherItem => {
+                //     if (otherItem !== item) {
+                //         otherItem.classList.remove('active');
+                //     }
+                // });
+                
+                // Toggle current FAQ
+                item.classList.toggle('active');
+            });
+        });
+
+        // Play button animation
+        const playButton = document.querySelector('.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                alert('Video demo would play here!');
+            });
+        }
+
+        // Toggle tabs functionality
+        const toggleTabs = document.querySelector('.toggle-tabs');
+        if (toggleTabs) {
+            const tabs = toggleTabs.querySelectorAll('span');
+            const highlight = toggleTabs.querySelector('.toggle-highlight');
+            
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', function() {
+                    if (index === 0) {
+                        highlight.style.left = '9px';
+                        tabs[0].style.color = '#000';
+                        tabs[1].style.color = '#fff';
+                        tabs[1].style.textShadow = '2px 2px 0px #000';
+                        tabs[0].style.textShadow = 'none';
+                    } else {
+                        highlight.style.left = '285px';
+                        tabs[1].style.color = '#000';
+                        tabs[0].style.color = '#fff';
+                        tabs[0].style.textShadow = '2px 2px 0px #000';
+                        tabs[1].style.textShadow = 'none';
+                    }
+                });
+            });
+        }
+
+        // Add hover effects to all buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.2s ease';
+            });
+        });
+
+        // Parallax effect for phone mockup
+        window.addEventListener('scroll', function() {
+            const phone = document.querySelector('.phone-mockup');
+            if (phone) {
+                const scrolled = window.pageYOffset;
+                phone.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+    </script>
+    </div>
+</body>
+</html>
