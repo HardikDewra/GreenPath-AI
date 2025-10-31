@@ -149,7 +149,8 @@ MIT License - Free to use with attribution.
 
 **Hardik Dewra**
 - Email: thehardikdewra@gmail.com
-- Agency: [wedesignbrands.agency](https://wedesignbrands.agency)
+- Agency: [WeDesignLandingPages.com](https://WeDesignLandingPages.com)
+- Portfolio: [hardikdewra.com](https://hardikdewra.com)
 - Design: Neo-brutalism landing page for GreenPath AI
 
 ## 🎓 Credits
