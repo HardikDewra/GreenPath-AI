@@ -992,7 +992,7 @@
             line-height: 26px;
             color: #000;
             margin-bottom: 12px;
-            margin-left: 72px;
+            margin-left: 64px;
             letter-spacing: -0.18px;
             list-style: none;
         }
@@ -1109,11 +1109,13 @@
         .faq-icon::before {
             width: 32px;
             height: 4px;
+            border-radius: 2px;
         }
 
         .faq-icon::after {
             width: 4px;
             height: 32px;
+            border-radius: 2px;
         }
 
         .faq-item.active .faq-icon {
@@ -1436,6 +1438,31 @@
             }
         }
 
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .hero-container,
+            .logos-container,
+            .how-it-works-container,
+            .impact-container,
+            .testimonials-container,
+            .track-impact-container,
+            .problem-container,
+            .ai-agents-container,
+            .video-container-wrapper,
+            .pricing-container-wrapper,
+            .faq-container,
+            .platforms-container-wrapper,
+            .footer-cta-container,
+            .footer-container {
+                max-width: 100%;
+            }
+        }
+
         @media (max-width: 768px) {
             body {
                 overflow-x: hidden;
@@ -1738,18 +1765,57 @@
                 padding: 20px;
                 width: 100%;
                 box-sizing: border-box;
+                flex-direction: column;
+                gap: 40px !important;
             }
 
             .pricing-card {
                 min-width: auto;
                 width: 100%;
                 box-sizing: border-box;
+                padding: 40px 20px !important;
             }
 
             .pricing-card.featured {
                 min-width: auto;
                 width: 100%;
                 box-sizing: border-box;
+                min-height: auto !important;
+            }
+
+            .pricing-features {
+                padding-left: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .pricing-features li {
+                padding-left: 0 !important;
+                margin-left: 12px !important;
+                text-align: left;
+            }
+
+            /* Pricing card shadows and CTA */
+            .pricing-card {
+                box-shadow: 5px 5px 0px #000 !important;
+            }
+
+            .pricing-card:hover {
+                transform: translate(2px, 2px);
+                box-shadow: 3px 3px 0px #000 !important;
+            }
+
+            .pricing-cta {
+                font-size: 20px !important;
+                -webkit-text-stroke: 0.5px #000 !important;
+                text-shadow: 1px 1px 0px #000 !important;
+            }
+
+            .featured-badge {
+                box-shadow: 4px 4px 0px #000 !important;
+            }
+
+            .featured-badge:hover {
+                box-shadow: 2px 2px 0px #000 !important;
             }
 
             /* Ensure all step cards and other cards are 100% width */
@@ -2065,7 +2131,7 @@
                 </div>
             </div>
             <div class="testimonial-card card-base">
-                <p class="testimonial-text">"I had no idea my shopping habits were so bad for the environment. Greenpath makes it super easy to find better options without spending more."</p>
+                <p class="testimonial-text">"We got the GreenPath certification and our sales jumped 40% in two months. Customers finally trust that we're actually sustainable."</p>
                 <div class="testimonial-author">
                     <div class="author-avatar cyan"></div>
                     <div>
@@ -2075,12 +2141,12 @@
                 </div>
             </div>
             <div class="testimonial-card card-base">
-                <p class="testimonial-text">"I had no idea my shopping habits were so bad for the environment. Greenpath makes it super easy to find better options without spending more."</p>
+                <p class="testimonial-text">"As a climate scientist, I'm impressed by the accuracy of their data. This is the real deal, not just greenwashing marketing."</p>
                 <div class="testimonial-author">
                     <div class="author-avatar yellow"></div>
                     <div>
                         <div class="author-name">Dr. Lisa Wang</div>
-                        <div class="author-role">Environmental Scientist</div>
+                        <div class="author-role">Environmental Scientist, MIT</div>
                     </div>
                 </div>
             </div>
